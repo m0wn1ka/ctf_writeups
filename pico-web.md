@@ -96,3 +96,56 @@ Disallow: /477ce.html
 - now to the list of accept languages we add sv
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/f59fa3b9-00d1-4b45-a8a3-b50cd4fd5892)
 - picoCTF{http_h34d3rs_v3ry_c0Ol_much_w0w_79e451a7}
+## login
+- the description is
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/56dcfd13-6dcb-4ae4-8309-836ffaf3afd5)
+- this is the site
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/2920bf56-c5cd-47bb-a457-91de806e9b87)
+- we look at the source code and unminify it
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/bf9ef6a2-c75b-4384-ad2e-eda9992ce4f5)
+- there we see atob of password is the flag
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/ba55f80c-4c1d-4301-8d2d-434a42c544c6)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/7cf1d948-886a-42a1-821e-d0fae27db7aa)
+- picoCTF{53rv3r_53rv3r_53rv3r_53rv3r_53rv3r}
+
+
+## on includes
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/0e20f7f2-35a0-4d88-ba60-c1990929424c)
+- in styles.css ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/d7387842-6630-48e6-9e36-8756a1ced14e)
+- picoCTF{1nclu51v17y_1of2_
+- and is script.js ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/031bc0ae-dd92-4b75-bcb6-ddb248174d52)
+- picoCTF{1nclu51v17y_1of2_f7w_2of2_df589022}
+## inspect html
+- here on inspection we get the flag
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/995147d6-33ad-4dbf-a08a-2d128d14f5ed)
+## local authority
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/403fcd92-89e1-4591-aad1-11d1abb783fb)
+- on followin along the threads
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/ccd1f969-6f7a-4266-84fe-6e2d4bb2b98e)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/87f50a6b-12b9-4558-b231-3ec2383f0198)
+-  picoCTF{j5_15_7r4n5p4r3n7_a8788e61}
+
+
+## search source
+- here in one of the css file we get the flag
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/d8371dfd-f19a-44f1-b922-37864fa0c711)
+- picoCTF{1nsp3ti0n_0f_w3bpag3s_ec95fa49}
+
+## findme 
+- here we submit the username and passowrd and we see a coulple of splashes of redirections
+- we try to see them one after another and we see base64 encoding =
+- we decode to see the interesingness
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/49bdfc23-54c1-48cf-8de3-813ffa1d0443)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/b58b3c0e-fcde-4985-aa8a-afcd688d3397)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/8ccba068-dcc3-4592-ad07-f2a0b843638b)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/c1e57c71-7b6b-4a7a-8cf3-043a0fbdb64c)
+- picoCTF{proxies_all_the_way_d1c0b112}
+
+
+## match the regex
+- paaaaaF!
+- picoCTF{succ3ssfully_matchtheregex_2375af79}
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/3ff07eb7-ab50-4c78-9b8c-a02f5c3a0ed8)
+- on looking at the source code
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/2d44d29e-032c-47e6-8749-3f2310f5be41)
+- we see we need to start with p and have 5 chars then end with F!
