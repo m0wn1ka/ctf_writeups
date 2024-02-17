@@ -43,10 +43,22 @@
   set the iso as cookie 
 - `Do you speak the language of the flags?` may be we need to use accept language as flag...
 - `does not work`
-# crypto/valentines-day
+# crypto/valentines-day ---not commpleted
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/988828e2-64ed-4174-a128-f26d52531207)
 - cipher text
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/c6d2ec5b-ca52-4daa-839a-ed0f8690393a)
 - at line 12 we do see the flag but in encrypted format
 - we are given a small part of the plain text
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/86707368-e933-46ff-b8b4-0dbb8a996501)
+# rev/shattered-memories
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/e1e3e8c5-955a-49a1-af69-04021832889f)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/fb930fe8-1111-4918-9280-f2a29c89d6fb)
+- now we use ghidra to analyse the code
+- we see the main funciton
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/8ccc22ff-fb79-4755-8d37-288cb5f21285)
+- here we see case 5 is the win
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/07370113-6160-4a5d-abda-2b8cf5a578ec)
+- we see the flag but not in order
+- so we order them and get the flag
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/f4e1f061-7935-4517-b5cc-72a0fc3339d7)
+- lactf{not_what_forgive_and_forget_means}
