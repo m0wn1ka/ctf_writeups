@@ -43,3 +43,10 @@
   set the iso as cookie 
 - `Do you speak the language of the flags?` may be we need to use accept language as flag...
 - `does not work`
+# crypto/valentines-day
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/988828e2-64ed-4174-a128-f26d52531207)
+- cipher text
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/c6d2ec5b-ca52-4daa-839a-ed0f8690393a)
+- at line 12 we do see the flag but in encrypted format
+- we are given a small part of the plain text
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/86707368-e933-46ff-b8b4-0dbb8a996501)
