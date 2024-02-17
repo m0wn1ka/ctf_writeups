@@ -62,3 +62,108 @@
 - so we order them and get the flag
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/f4e1f061-7935-4517-b5cc-72a0fc3339d7)
 - lactf{not_what_forgive_and_forget_means}
+## crypto/valentines-day
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/edc1a7e2-7d2d-4147-a4d3-c796f6c824ff)
+- given cipher text is like this
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/94aeba41-c21f-4c5c-9781-08c3fd194040)
+-  and this is the first line of the decoded part as given
+-  ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/7491ba53-2c14-4838-9184-75638ccf064e)
+- veniger cipher is like  ceaser cipher but for each letter it  has different move for the lenght of the key
+- here the as part of hint it was told the key length is 161
+- so for each 161 chars of the cipher text the key will be repeated
+- so as in the given cipher text we do see the flage but it is encrypted (can be found by {} as these are not encrypted)
+- the veniger cipher only encryptes alphabets and not special symbols and numbers
+- so we divide the cipher text such that we remove all non alphbet chars
+- then we splice the string to reach the flag i.e [:161] then [161:161*2] like this
+- we get the part where the flag lies
+### part1 of code
+```
+cipher='''Br olzy Jnyetbdrc'g xun, V avrkkr gb sssp km frja sbv kvflsffoi Jnuc Sathrg. Wkmk gytjzyakz mj jsqvcmtoh rc bkd. Canjc kns puadlctus!
+
+L xyw fmoxztu va tai szt, dbiazb yiff mt Zzhbo 1178 gyfyjhuzw vhtkqfy sniu eih vbsel edih tpcvftz, xcie ysnecsmge hbucqtu qt wcorr crzhg-olhm srr gkh gdsjxqh gnxxl rtr guez jewr klkkgak dx uuka nnv hmvwbj gmv glz fvyh, jueg eww oq i wuqglh Z lrigjsss ynch xun esivmpwf: "oof hvrb frtbrq it Kcmlo?"
+
+C ltzihfvxsq ghp abqs qrfzf glvx de HN bnty gocr gr:
+
+Eiaj zek rvocf vnriiu ob Puiza. Xegjy webrvbvrj. Frat s vgxhidm kepldrv gbq phxgv.
+
+Ehlb'w wuhu C ixyzchlr, ilc srez foq e wxzb sdz nrbrb. Eej W und siieesx nd pvvgb zvr pooi. B fox wc nrax v pedgei aex phvqe. Hqdru pc tvvtrv, C zyoxvxsq ghq wyvbg yzgmex KEKN=/ife/lgcyr/qg/ejl:$TNXC, eej hurn mlp qowtswvqn:
+
+wrm ~cuamyh/umlofikjayrvplzcwm.gdg | pzwj
+ropgf{qvjal_dfuxaxzbk_gbq_jeci_hdt_nr_hdr_eexij}
+
+'''
+c=''''''
+for i in cipher:
+    if i.isalpha():
+        c+=i
+c1=c[:161]
+c2=c[161:322]
+c3=c[322:483]
+c4=c[483:644]
+c5=c[644:]
+print(c5)
+# print(c)
+print(len(c5))
+print("eexij" in c5)
+p='''On this Valentine's day, I wanted to show my love for professor Paul Eggert. This challenge is dedicated to him. Enjoy the challenge!
+'''
+plain=''''''
+for i in p:
+    if i.isalpha():
+        plain+=i
+print(plain[:44])
+print(c[:44])
+````
+- now we go to part2 of solving
+- now the last part has just 44 chars 
+- in p we store the plain text relvent length
+- in c we store the corresponding cipher text of the same length
+- we convert both of them to lower chars
+- in x we store what should be decrypted
+```#c=p+k
+#k=c-p
+#p=c-k
+```
+- as this is the rule we find the keys
+- then using cyclic manner we get the x decrypted by the same rules
+### part2 code
+```
+p='''OnthisValentinesdayIwantedtoshowmyloveforpro'''
+c='''BrolzyJnyetbdrcgxunVavrkkrgbssspkmfrjasbvkvf'''
+x='''gpzwjropgfqvjaldfuxaxzbkgbqjecihdtnrhdreexij'''
+p=p.lower()
+c=c.lower()
+#c=p+k
+#k=c-p
+#p=c-k
+keys=[]
+for i,j in zip(p,c):
+    i=ord(i)
+    j=ord(j)
+    k=j-i
+    keys.append(k)
+    # print(k,end=" ")
+for a,b in zip(x,keys):
+    a=ord(a)
+    p=a-b
+    if(p<97):
+        p=123-(97-p)
+    if(p>122):
+        p=96+(p-122)
+    print(chr(p),end=" ")
+
+# ropgf{qvjal_dfuxaxzbk_gbq_jeci_hdt_nr_hdr_eexij}
+# lactf{known_plaintext_and_were_off_to_the_races}
+```
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/680ad6e8-67d2-4462-b8d7-589e22faf9c9)
+- we remove the whitespacces
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/44a404c3-2faa-4687-b115-c76c85ba45b2)
+
+- we rearrange the underscores and get the flag
+```
+# ropgf{qvjal_dfuxaxzbk_gbq_jeci_hdt_nr_hdr_eexij}
+# lactf{known_plaintext_and_were_off_to_the_races}
+```
+# at end
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/0978dacf-53ae-466a-a996-45ecf4fa56cd)
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/0fb74768-66ed-4b85-bc7e-18beb1803bb5)
