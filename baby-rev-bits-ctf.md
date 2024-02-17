@@ -46,3 +46,6 @@ print(ans)
 ```
 - which gives the flag
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/9f1ff7c2-ef99-48dc-a945-00a397df4b00)
+
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/90c9850d-4d35-47c4-be2f-7a435e9868b0)
+
