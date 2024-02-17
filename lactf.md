@@ -17,7 +17,7 @@
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/2dd3f5e8-c200-4821-8582-655bd77b7463)
 - so the flag is lactf{that_button_was_definitely_not_one_of_the_terms}
 - document get element by id https://www.w3schools.com/jsref/met_document_getelementbyid.asp
-## flag lang
+## flag lang --not completed
 - at endpoint ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/a7c010c4-81a0-4cbc-9966-415706db2a83)
 - the zip file has
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/7883fc67-9ed4-46f0-955c-9dd59f0ee4ec)
@@ -41,3 +41,5 @@
 - if the  `country` does not have a passoword it will set the iso of the country as cookie and redirect to it self
 - and if the country has passoword it will be checked against the req.cookies.passowrd  then a well the same will happend,
   set the iso as cookie 
+- `Do you speak the language of the flags?` may be we need to use accept language as flag...
+- `does not work`
