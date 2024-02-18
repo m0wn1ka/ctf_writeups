@@ -167,3 +167,16 @@ for a,b in zip(x,keys):
 # at end
 ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/0978dacf-53ae-466a-a996-45ecf4fa56cd)
 ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/0fb74768-66ed-4b85-bc7e-18beb1803bb5)
+
+
+# crypto/selamat pagi --not completed
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/c3252409-42ca-43cc-bdc9-cc7ef804900e)
+- selamat pagi means good mornign in indonesian
+```
+Efe kqkbkx czwkf akfs kdkf qzfskf wzdcjtfk
+Ieqku kqk akfs ikxj kck akfs wkak ukikukf :Q
+Lzfqztk ukdj kqk qe wefe: bkvim{wzbkdki_ckse_kckukx_ukdj_wjuk_kfkbewew_mtzujzfwe}
+
+```
+- this is the text given we know bkvim=>lactf
+- check if is ceaser cipher
