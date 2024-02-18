@@ -180,3 +180,66 @@ Lzfqztk ukdj kqk qe wefe: bkvim{wzbkdki_ckse_kckukx_ukdj_wjuk_kfkbewew_mtzujzfwe
 ```
 - this is the text given we know bkvim=>lactf
 - check if is ceaser cipher
+# rev/aplet321
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/f6cf9a90-1870-4e52-9929-5fe01914ef8b)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/1d24a0d2-bd96-4e86-bd04-879a316ce1eb)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/d04658be-7325-4fd8-b83e-3dd8beab3083)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/2257a6c9-abc4-40a4-b59e-9d09ae344d78)
+- so by analyzing the code we see
+- that there must be a stirng pretty and please in the input
+- it compares the user input string and counts the occurences and adds the occurences
+- `pretty` count is in ivar5 and `please` count is in ivar4
+- then it checks whetehr user input has the word flag
+- if flag word does not exist it sasy sorry i did not understand and returns
+- so we must have flag as well in our input
+- then it checks whether the count of ivar5,ivar4 for a few conditions
+- their sum must be 0x36 and their diff must be 0x16
+- then it gives the flag
+### conditions analysis
+```
+x+y=54
+x-y=-24
+=====
+y=x+24
+y=54-x
+========
+x+24=54-x
+2x=30
+x=15
+======
+x+y=54
+y=54-15
+y=39,x=15
+var5=x=pretty=15
+var4=y=please=39
+```
+### python to generate user input
+```
+>>> int('0x36',16)
+54
+>>> int('0x18',16)
+24
+>>> 54015
+54015
+>>> 54-5
+49
+>>> 54-15
+39
+>>> ans='pretty'*15+'please'*39
+>>> ans
+'prettyprettyprettyprettyprettyprettyprettyprettyprettyprettyprettyprettyprettyprettyprettypleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleaseplease'
+>>> 
+
+```
+so now we give this input and append the word flag as it is required (a check satisfaction)
+### solution
+```
+C:\home\radha\Downloads\la ctf\rev3> nc chall.lac.tf 31321
+hi, i'm aplet321. how can i help?
+prettyprettyprettyprettyprettyprettyprettyprettyprettyprettyprettyprettyprettyprettyprettypleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleasepleaseflag
+ok here's your flag
+lactf{next_year_i'll_make_aplet456_hqp3c1a7bip5bmnc}
+                                                                                                                                                                      
+C:\home\radha\Downloads\la ctf\rev3> 
+
+```
