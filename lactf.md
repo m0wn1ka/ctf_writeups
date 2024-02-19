@@ -245,6 +245,7 @@ C:\home\radha\Downloads\la ctf\rev3>
 ```
 
 ## score board
-![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/0a7462c7-9549-4f84-8bd7-f547e1616556)
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/010940ed-fcb2-4dc8-a9b9-46201435f642)
+
 ## solves
-![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/7ddb2257-80b8-4cd1-a37a-bc20deadcba9)
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/eae1399d-06b0-484a-bf62-8fbde82943ec)
