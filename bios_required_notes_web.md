@@ -113,3 +113,38 @@ here  while resovleing the require.resovle() there is not sanitation ,may be pat
 - here we can try to requie the parent direcory and see the cache to get the flag ,as flag is in /notes
 ## way2
 - our input is in json formate so there can be some desrilizaion issues
+## way3
+- while accessing the created note we access url/view/id
+- so all we need to find is correct id
+- bruteforcing is not the intended way
+- what we can do is
+```
+app.get('/search/:noteId', (req, res) => {
+  const noteId = req.params.noteId;
+  const notes=glob.sync(`./notes/${noteId}*`);
+  if(notes.length === 0){
+    return res.json({Message: "Not found"});
+  }
+  else{
+    try{
+      fs.accessSync(`./notes/${noteId}.json`);
+      return res.json({Message: "Note found"});
+    }
+    catch(err){
+      return res.status(500).json({ Message: 'Internal server error' });
+    }
+  }
+
+})
+```
+- here we use search method
+```
+ const notes=glob.sync(`./notes/${noteId}*`);
+```
+- our noteid is directly appended so we can give nothing
+- so if we bypass the remote address check we can find all the files in the notes folder
+- but the output is whether there is a msg or not
+#### needed code
+- req1:bypass remote address check
+- try from a-z* when ther is msg of message found we go and tryx(a-z)*
+- this loop run through the lenght of id which is 16
