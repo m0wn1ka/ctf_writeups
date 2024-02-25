@@ -99,7 +99,7 @@ here  while resovleing the require.resovle() there is not sanitation ,may be pat
 
 ## way1
 ```
-app.get('/view/:noteId', (req, res) => {
+ app.get('/view/:noteId', (req, res) => {
   const noteId = req.params.noteId;
 
   try {
