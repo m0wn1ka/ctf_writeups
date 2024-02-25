@@ -148,3 +148,6 @@ app.get('/search/:noteId', (req, res) => {
 - req1:bypass remote address check
 - try from a-z* when ther is msg of message found we go and tryx(a-z)*
 - this loop run through the lenght of id which is 16
+### ssrf
+- so we need to do ssrf
+- it is mostly similart to this https://infosecwriteups.com/nodejs-ssrf-by-response-splitting-asis-ctf-finals-2018-proxy-proxy-question-walkthrough-9a2424923501
