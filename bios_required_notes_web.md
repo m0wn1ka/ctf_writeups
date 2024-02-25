@@ -151,3 +151,5 @@ app.get('/search/:noteId', (req, res) => {
 ### ssrf
 - so we need to do ssrf
 - it is mostly similart to this https://infosecwriteups.com/nodejs-ssrf-by-response-splitting-asis-ctf-finals-2018-proxy-proxy-question-walkthrough-9a2424923501
+- option1-request splitting
+- option2- https://huntr.com/bounties/505a3d39-2723-4a06-b1f7-9b2d133c92e1/ -use @
