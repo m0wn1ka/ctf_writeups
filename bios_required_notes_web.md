@@ -90,9 +90,26 @@ pp.get('/view/:noteId', (req, res) => {
 ```
 here  while resovleing the require.resovle() there is not sanitation ,may be path traversal and load the whole /notes and see the cache...
 - 
-## path GET /healthcheck
-- call health check funciton
-- 
-
 
 ##
+ ...
+ - https://ch1598141041.ch.eng.run/view/Healthcheck
+ - for this path the response is
+ -  ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/30f76818-18f0-4f16-a5fa-ddb6e6132a8b)
+
+## way1
+```
+app.get('/view/:noteId', (req, res) => {
+  const noteId = req.params.noteId;
+
+  try {
+    let note=require.resolve(`./notes/${noteId}`);
+    if(!note.endsWith(".json")){
+      return res.status(500).json({ Message: 'Internal Server Error' });
+    }
+
+    let noteData = require(`./notes/${noteId}`);
+```
+- here we can try to requie the parent direcory and see the cache to get the flag ,as flag is in /notes
+## way2
+- our input is in json formate so there can be some desrilizaion issues
