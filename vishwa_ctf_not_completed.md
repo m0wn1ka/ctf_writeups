@@ -70,5 +70,28 @@ A Courrpt AI Agent and Its Army of 128 Aesthetic Looking Robots Are Heading Towa
 ```
 Aesthetic Looking army of 128 Robots with AGI Capabilities are coming to destroy our locality!
 ```
-- so it has somthing to do with useragent 
+- so it has somthing to do with useragent
+- 
+
+
+
+
+## Recipe Archival Workshop
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/d129a70b-8c8a-4abd-9369-b0ba57a36e38)
+```
+New interns in the Recipe Archival Workshop have a simple task- upload images of yummy delicacies and dream about tasting them some day.
+```
+- so we need to upload images and they will be may be visited by admin bot ,there exists a remote code execution
+- say the uploaded files need to be saved somewhere
+- so we need execute commands and get the output saved in public folder or try to ping the output to a webhook site
+- here the check for file type does happen
+- however it is not much strict
+- we can say the name of file as png with extnsion and change the content as per our wish and it accepts and uplaods
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/f143deae-1eb8-4d29-93b7-df121fe59091)
+- it uses php as can be seen while uploading it goes to /upload.php
+- try this
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/8972e7cf-27a6-4723-9b70-4486babe87a1)
+but did not work
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/45e17a62-c7f2-4c7f-889a-96d771fa4e58)
+
 
