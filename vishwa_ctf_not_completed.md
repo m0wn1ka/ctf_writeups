@@ -38,3 +38,37 @@ zsh: segmentation fault  sudo mysqlbinlog DBlog-bin.000007
 
 ```
 
+
+## web/they are coming
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/33814948-2683-4849-86e0-496c680db217)
+- try to go to /robots.txt
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/2d284718-1a59-48d4-aed8-7ed4dffbb1c2)
+```
+C:\home\radha\Downloads\viswa_ctf\web> echo "L3NlY3JldC1sb2NhdGlvbg=="|base64 -d
+/secret-location                                                                                                                                                                       
+
+```
+
+- at admin
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/7f5ccb6b-aec2-4684-b673-673b16def671)
+- at secret-locaiton
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/e32443b2-c5bb-43a0-85f7-e90e5778a8fc)
+- try x headers for local host like forwarded for,forwarded host,
+## tries
+- X-Forwarded-Host: localhost --no
+- X-Forwarded-Host: 127.0.0.1 --no
+- X-Forwarded-For: 127.0.0.1 --no
+- X-Forwarded-For: localhost --no
+## robotstxt.html
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/a7850246-609f-4918-90eb-3c6a05c04d4f)
+
+### data at secret locaion
+```
+A Courrpt AI Agent and Its Army of 128 Aesthetic Looking Robots Are Heading Towards Local Vault of the City of Dawn!
+```
+### data at description
+```
+Aesthetic Looking army of 128 Robots with AGI Capabilities are coming to destroy our locality!
+```
+- so it has somthing to do with useragent 
+
