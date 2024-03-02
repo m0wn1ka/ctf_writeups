@@ -95,3 +95,17 @@ but did not work
 ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/45e17a62-c7f2-4c7f-889a-96d771fa4e58)
 
 
+
+
+## H34D3RS
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/d53f36eb-b71d-4684-86d1-ea6c41d9a774)
+- change user agen User-Agent: lorbrowser
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/13ec2aab-32bb-4fe1-83f3-a3fc25394c1a)
+now add the referer header
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/9af936b2-9b94-4e1c-b4a3-7309cbfd8588)
+```
+But wait..you are mere mortal who lives in the present. We are divine beings living 20 years in the future. We are not the same.
+```
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/838fc2f2-8cfe-4eea-a74f-e2c086d98fd1)
+
+
