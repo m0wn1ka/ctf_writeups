@@ -33,3 +33,9 @@ app.get("/image", (req, res) => {
 ```
 view-source:https://mikufanpage.web.osugaming.lol/image?path=miku5.jpg./../flag.txt
 ```
+## crypto/base727
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/f2bc1061-c51c-4481-bf22-4ba608280d37)
+- encode() decode() are for string to bytes and vice versa
+- bin asci hexlify is for bytes->hex
+- https://www.educative.io/answers/what-is-binasciihexlify-in-python
+- 
