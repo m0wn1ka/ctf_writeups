@@ -16,7 +16,8 @@
 - we try to test on the website
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/b450ab9f-c1f7-4d84-9ec3-9ed7a57aae7c)
 - we try in cmd
-- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/32af7674-e480-45c4-8a0a-fa50ed43ecea)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/38a28775-d0d6-438f-aea6-9ee6cc73ca4a)
+
 - we try in website
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/ec1ea4ce-f899-450d-b3ab-618709fa7e1c)
 - shaktictf{finally_you found_the_flag_hehehheh!}
