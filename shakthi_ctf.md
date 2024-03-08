@@ -62,7 +62,40 @@ if __name__ == '__main__':
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/6485e38b-710b-4da6-804b-131414dfb3c4)
 ### source code review
 - we see flag is in flag.txt file and being copied
-- 
+- the files are
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/9172a6d7-d8fa-44e3-acc8-2945a8af579f)
+#### reverse proxy
+- reverse proxy https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/f95e0a4d-4105-4091-b223-4a076815d899)
+## http header smuggling through a reverse proxy
+https://portswigger.net/daily-swig/how-to-perform-an-http-header-smuggling-attack-through-a-reverse-proxy
+#### using http version 1
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/82bf4832-538b-4b6d-90b6-3093243d7a23)
+## werzeug old version
+- the web instace uses 2.1
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/bf1ef439-a67e-48df-a4a0-6381f6160fbc)
+- but the latest version is 3.1
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/277968af-e25f-4edf-abad-fc37823d65f1)
+- we do find some cves for request smuggling
+- https://nvd.nist.gov/vuln/detail/cve-2022-29361
+- https://nvd.nist.gov/vuln/detail/cve-2022-29361
+```
+Improper parsing of HTTP requests in Pallets Werkzeug v2.1.0 and below allows attackers to perform HTTP Request Smuggling
+ using a crafted HTTP request with multiple requests included inside the body
+```
+- from this site https://portswigger.net/web-security/request-smuggling
+- we do see ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/8c85684c-7399-4bb1-8893-2c3224ed0d4e)
+- so it is a clear issue
+
+- so we need to do request smugling
+### smuggling
+- with this
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/440c9b40-7aff-4804-8a18-463f36dc69f1)
+we see frontend is usign transfer encoding
+- after reading 3(abc) it expects a x but did not get any so gives a err
+we see backend is usig contnet length
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/354a070a-1c16-4be9-801e-2c2ed4dbe37b)
+- as we know frontend uses te chunked it drops x,but bakend which s using content lenght is expecting the 6th byte so timeouts
 
 
 
