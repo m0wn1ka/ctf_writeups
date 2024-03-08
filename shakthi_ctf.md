@@ -47,5 +47,24 @@ if __name__ == '__main__':
 - we try in website
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/ec1ea4ce-f899-450d-b3ab-618709fa7e1c)
 - shaktictf{finally_you found_the_flag_hehehheh!}
+-
+## notes v1/web
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/c4276ffe-1d31-4c0f-9837-49a505d9c806)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/a7c3a68f-9420-4ac4-a8e2-01199e1ccdce)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/d6800361-de4f-4516-9d40-6b3f1e54dd97)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/a67729dc-497c-4254-a9bf-b28d04e702eb)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/2dba1024-4e19-4dc1-a666-8a4c240d5032)
+- create a note1
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/7e5fad27-3a2d-4f41-b384-167a169ff980)
+- on decoding jwt1
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/f71bd88b-0439-4d19-8766-e7f5b1c24b7a)
+- see the edit notes feature
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/6485e38b-710b-4da6-804b-131414dfb3c4)
+### source code review
+- we see flag is in flag.txt file and being copied
+- 
+
+
+
 
 
