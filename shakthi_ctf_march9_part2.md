@@ -1,4 +1,6 @@
 ## rev/waruprev
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/3b81471a-6a1c-4f65-a373-5def1ba098dc)
+
 ```
   local_58 = 0x316e64333364217d;---1nd33d!}
   local_50 = 0x346c6c336e67335f;----4ll3ng3_
