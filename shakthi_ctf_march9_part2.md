@@ -78,6 +78,8 @@ undefined8 main(undefined8 param_1,undefined8 param_2)
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/41a72019-d7aa-43d5-a3c9-445c36b24e99)
 - we get illegal hardware instruciton
 ## operation ultra/rev
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/091e9ed6-5a59-49cd-8f8b-2089bc3e89cd)
+
 ### given ultra.py
 ```
 import base64
