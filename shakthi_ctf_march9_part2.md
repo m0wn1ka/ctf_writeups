@@ -75,4 +75,140 @@ undefined8 main(undefined8 param_1,undefined8 param_2)
 - we try to execute /bin/ls .
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/41a72019-d7aa-43d5-a3c9-445c36b24e99)
 - we get illegal hardware instruciton
-  
+## operation ultra/rev
+```
+func2_result_ord=[32, 0, 27, 30, 84, 79, 86, 22, 97, 100, 63, 95, 60, 34, 1, 71, 0, 15, 81, 68, 6, 4, 91, 40, 87, 0, 9, 59, 81, 83, 102, 21]
+flag_len=len(func2_result_ord)
+func2_res_in_aray_from = [''] * flag_len
+j=0
+for i in range(0,flag_len,4):
+    func2_res_in_aray_from[j]='loop1 value with j'
+    func2_res_in_aray_from[j+1]="loop1 value with j+1"
+    j+=2
+for i in range(2, flag_len, 4):
+        func2_res_in_aray_from[j] = "loop2 value with j"
+        func2_res_in_aray_from[j + 1] ="loop 2 value with j+1"
+        j += 2
+for i in range(len(func2_res_in_aray_from)):
+    print(i,func2_res_in_aray_from[i])
+
+```
+- with this code we see that the first 0-15 comes from loop1 and 16-31 from loop2
+## deobfuscation of code
+```
+import base64
+
+def func_1(user_input, shadow_string):
+    flag_len = len(user_input)
+   
+
+    fun1_result = bytearray(user_input, 'utf-8')
+
+    for i in range(flag_len):
+        fun1_result[i] = fun1_result[i] ^ ord(shadow_string[i % 10])
+
+    return fun1_result.decode('utf-8')
+
+def func_2(fun1_result):
+    flag_len = len(fun1_result)
+    func2_res_in_aray_from = [''] * flag_len
+
+    j = 0
+
+    for i in range(0, flag_len , 4):
+        func2_res_in_aray_from[j] = fun1_result[i]
+        func2_res_in_aray_from[j + 1] = fun1_result[i + 1]
+        j += 2
+
+    for i in range(2, flag_len, 4):
+        func2_res_in_aray_from[j] = fun1_result[i]
+        func2_res_in_aray_from[j + 1] = fun1_result[i + 1]
+        j += 2
+
+    return ''.join(func2_res_in_aray_from)
+
+def main():
+    shadow_string = 'Shadow2024'
+    user_input = input("Enter the input: ")
+
+    fun1_result = func_1(user_input, shadow_string)
+
+    fun2_result = func_2(fun1_result)
+
+    constants_array = [32, 0, 27, 30, 84, 79, 86, 22, 97, 100, 63, 95, 60, 34, 1, 71, 0, 15, 81, 68, 6, 4, 91, 40, 87, 0, 9, 59, 81, 83, 102, 21]
+
+    for i in range(len(user_input)):
+        if constants_array[i] != ord(fun2_result[i]):
+            exit(0)
+
+    print("\nCorrect Flag!\n")
+
+if __name__ == "__main__":
+    main()
+
+```
+## from final array to getting the result of func1(how mappingn between final array and func1 result happened)
+```
+func2_result_ord=[32, 0, 27, 30, 84, 79, 86, 22, 97, 100, 63, 95, 60, 34, 1, 71, 0, 15, 81, 68, 6, 4, 91, 40, 87, 0, 9, 59, 81, 83, 102, 21]
+flag_len=len(func2_result_ord)
+func2_res_in_aray_from = [''] * flag_len
+j=0
+new_array=[''] * flag_len
+new_array_index=0
+for i in range(0,flag_len,4):
+    func2_res_in_aray_from[j]='loop1 value with j with i='+str(i)
+    new_array[new_array_index]=i
+    new_array_index+=1
+    func2_res_in_aray_from[j+1]="loop1 value with j+1 with i="+str(i+1)
+    new_array[new_array_index]=i+1
+    new_array_index+=1
+    j+=2
+for i in range(2, flag_len, 4):
+        func2_res_in_aray_from[j] = "loop2 value with j with i="+str(i)
+        new_array[new_array_index]=i
+        new_array_index+=1
+        func2_res_in_aray_from[j + 1] ="loop 2 value with j+1 with i="+str(i+1)
+        new_array[new_array_index]=i+1
+        new_array_index+=1
+        j += 2
+for i in range(len(func2_res_in_aray_from)):
+    print(i,func2_res_in_aray_from[i])
+# for i in new_array:
+#      print(i,end=' ')
+print(new_array)
+final_need=[32, 0, 27, 30, 84, 79, 86, 22, 97, 100, 63, 95, 60, 34, 1, 71, 0, 15, 81, 68, 6, 4, 91, 40, 87, 0, 9, 59, 81, 83, 102, 21]
+'''
+func1 res array=?
+final_need[0]=func1 res array[new_aray[0]]
+final_need[1]=func1 res array[new_aray[1]]
+
+'''
+```
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/937174db-1915-4a71-ba19-34d59b1fdc7b)
+
+### the final step
+```
+final_need=[32, 0, 27, 30, 84, 79, 86, 22, 97, 100, 63, 95, 60, 34, 1, 71, 0, 15, 81, 68, 6, 4, 91, 40, 87, 0, 9, 59, 81, 83, 102, 21]
+function1_res_mapping=[0, 1, 4, 5, 8, 9, 12, 13, 16, 17, 20, 21, 24, 25, 28, 29, 2, 3, 6, 7, 10, 11, 14, 15, 18, 19, 22, 23, 26, 27, 30, 31]
+#final need[x]=func1_result[function1_res_mapping[x]]
+func1_result=[''] * 32
+
+#func1_res[x]=
+for i in range(len(function1_res_mapping)):
+    func1_result[function1_res_mapping[i]]=final_need[i]
+# print(func1_result)
+#[32, 0, 0, 15, 27, 30, 81, 68, 84, 79, 6, 4, 86, 22, 91, 40, 97, 100, 87, 0, 63, 95, 9, 59, 60, 34, 81, 83, 1, 71, 102, 21]
+answer_array=[''] * 32
+shadow_string = 'Shadow2024'
+for i in range(32):
+    answer_array[i] = chr(func1_result[i] ^ ord(shadow_string[i % 10]))
+
+# print("answer array is ",answer_array)
+ans="".join(answer_array)
+print("flag is ",ans)
+
+#x=y^z
+#x^z=>y
+```
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/a31ad236-77e3-4121-968f-fadbb6060494)
+flag is  shaktictf{Ul7r4_STe4l7h_SUcc3s5}
