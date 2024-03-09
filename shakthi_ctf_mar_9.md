@@ -32,3 +32,36 @@
 - use os.system ..to read the file like using readfile() ---can t use as of s
 - file_Get_contnets() ---can't use as of c
 - fgets()--need to open file with fopen()
+
+## bypass try with pcre limit
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/df0c8561-9a83-4ae7-b423-40d9ae6b3d8d)
+https://stackoverflow.com/questions/17926195/php-preg-match-length-3276-limit
+```
+
+function filter($command) {
+    if(preg_match('/(`|\.|\$|\/|a|c|s|require|include)/i', $command)) {
+        return false;
+    }
+    return true;
+}
+
+if(filter($command)) {
+    eval($command);
+    echo "Command executed";
+} else {
+    echo "Restricted characters have been used";
+}
+```
+- so here if our command is longer than this then pregmatch will return false
+- as a reult if conditon willl not go through so filter will reurn true
+- so we check by gibing 3276*innocent chars+1 evil char
+- pcre recursion limit some say 10 million
+- so write a python script
+### says url tool long 
+## bypass try with new line char
+https://ramadistra.dev/fbctf-2019-rceservice
+https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/php-tricks-esp
+but that is not working having %0A 
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/d70bd095-33b3-4d17-bf88-dce49048e610)
+- a help ful resoruce https://simones-organization-4.gitbook.io/hackbook-of-a-hacker/ctf-writeups/intigriti-challenges/1223
+- 
