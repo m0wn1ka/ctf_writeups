@@ -1,3 +1,8 @@
+# profile
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/75167fd6-b177-4f2a-9a75-cd0d7f816ea5)
+# scoreboard
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/8b0c7cb4-6cbd-4383-83e1-5d421a9752c8)
+
 ## delicious/web
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/63ece15d-a997-4162-880f-7f1d190b8157)
 
