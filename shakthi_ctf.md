@@ -1,4 +1,6 @@
 ## delicious/web
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/63ece15d-a997-4162-880f-7f1d190b8157)
+
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/3e9f8dd5-83f6-4628-a695-48c51d3ac474)
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/05b59a96-d01e-4cad-aa0e-1976ce365a8c)
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/4c7fa682-8842-4712-a3d4-035ab27fad5d)
@@ -6,6 +8,8 @@
 
 
 ## find the flag/web
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/77c2fa9a-64b5-461e-940d-5def64bd179e)
+
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/037ac7b7-e6f4-4857-9c00-fcafc6731448)
 - os.popen https://www.tutorialspoint.com/python/os_popen.htm
 - find cmd resource https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
