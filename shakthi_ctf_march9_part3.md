@@ -1,6 +1,8 @@
 ## rev/cyber kingdom
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/539135d2-3729-4f28-b121-a987dd29df97)
 ### by disassembling in ghidra
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/0b898bb2-8646-47a9-af9a-13ae15915306)
+
 ```
 
 undefined8 main(void)
