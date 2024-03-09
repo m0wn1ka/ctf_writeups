@@ -66,3 +66,13 @@ undefined8 main(undefined8 param_1,undefined8 param_2)
 
 
 ```
+## blankshell/pwn ---not comleted
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/8a8ef687-ac36-4627-b9ac-ce211d156cfe)
+- we see agent 007
+- in linux file permissions
+- https://kb.iu.edu/d/abdb
+- that means we have read write execute permissions
+- we try to execute /bin/ls .
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/41a72019-d7aa-43d5-a3c9-445c36b24e99)
+- we get illegal hardware instruciton
+  
