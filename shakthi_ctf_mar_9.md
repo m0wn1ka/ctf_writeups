@@ -25,3 +25,10 @@
 - so we place a random char as sign
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/ce1ed63c-b684-4fe6-9232-fe6c067a7fa6)
 - shaktictf{Y0u_4re_th3_ult1mat3_f4n}
+# web/filters
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/2cb909ac-241e-48f5-ade7-944397e6df75)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/a5e9c236-0d4d-4dbf-95f7-b1fda53e4624)
+### try to read files
+- use os.system ..to read the file like using readfile() ---can t use as of s
+- file_Get_contnets() ---can't use as of c
+- fgets()--need to open file with fopen()
