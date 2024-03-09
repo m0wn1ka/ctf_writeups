@@ -64,4 +64,19 @@ https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/php-trick
 but that is not working having %0A 
 ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/d70bd095-33b3-4d17-bf88-dce49048e610)
 - a help ful resoruce https://simones-organization-4.gitbook.io/hackbook-of-a-hacker/ctf-writeups/intigriti-challenges/1223
-- 
+
+- as the regex is not evil/can't stuck in a loop ,there is no way of pcre recurison limit use and we bypassing the filter
+
+### finding some useful commands
+- from this https://ramadistra.dev/fbctf-2019-rceservice
+- we see some useful commands (as ther are blockd)..
+- so we say while(false),it is executed
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/f77b6dab-1a84-44f5-a23f-4719c2d0b80c)
+### try highlight_file
+- https://ctftime.org/writeup/16595
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/820dca9c-d42d-4a1a-8982-60ac7ad05dda)
+- https://ctf-wiki.mahaloz.re/web/php/php/
+### try exploit
+- use fopen and _()
+
+
