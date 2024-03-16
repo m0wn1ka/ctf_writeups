@@ -44,3 +44,25 @@
 - https://gauntlet-okntin33tq-ul.a.run.app/hidden83365193635473293
 
 
+```
+import requests
+
+url = 'https://gauntlet-okntin33tq-ul.a.run.app/hidden83365193635473293'
+cookie_list=[]
+cookies1={'jwt-uncrackable-cookie-counter':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudGVyIjoyfQ.mmGFwHhAssPPS6Xq3ptN1ViB7T4B_3KaAKySvnhdlUk'}
+for i in range(505):
+    try:
+        r = requests.get(url,cookies=cookies1)
+        # cookie_list.append(r.cookies)
+        print(i)
+        cookies1['jwt-uncrackable-cookie-counter']=r.cookies['jwt-uncrackable-cookie-counter']
+        if(i>500):
+            print("cookie is ",r.cookies)
+    except Exception as e:
+        print("An error occurred:", e)
+if(cookie_list[0]==cookie_list[1]):
+    print("cookies are same")
+else:
+    print("cookes are differnt")
+```
+
