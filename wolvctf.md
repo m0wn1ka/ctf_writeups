@@ -42,6 +42,12 @@
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/6fa17377-9f3d-491e-af58-fc06d6ef0c4b)
 - now page 9
 - https://gauntlet-okntin33tq-ul.a.run.app/hidden83365193635473293
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/ae5deb12-3936-48a1-8b7b-5b7b70bb7b49)
+
+  ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/7e06fbb9-c9a7-48a7-9fa5-83247c290b59)
+https://gauntlet-okntin33tq-ul.a.run.app/flag620873537329327365
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/a08c220f-a6e3-4ad3-9020-f5a4c72ba93a)
+wctf{w3_h0p3_y0u_l34rn3d_s0m3th1ng_4nd_th4t_w3b_c4n_b3_fun_853643}
 
 
 ```
@@ -73,4 +79,11 @@ else:
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/e1d1c44f-2a40-4d85-881f-4909a155f4c3)
 - wctf{new_ai_old_algorithm}
 
+
+
+## upload fun /web
+- question
+-  ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/9debec42-8df7-460b-9a7f-e581172004ee)
+- this is the code
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/5c03c0d6-acfc-403d-ac75-456460c63d25)
 
