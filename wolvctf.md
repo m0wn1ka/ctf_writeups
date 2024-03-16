@@ -81,9 +81,12 @@ else:
 
 
 
-## upload fun /web
+## upload fun /web-- no completed
 - question
 -  ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/9debec42-8df7-460b-9a7f-e581172004ee)
 - this is the code
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/5c03c0d6-acfc-403d-ac75-456460c63d25)
+- from the code it is clear that unless we know the flag we cannot find the exact path
+- so we can try to make a common execution file and upload it and get the flag.txt
+## misc/made sense
 
