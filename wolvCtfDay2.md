@@ -62,3 +62,57 @@ for j in range(257):
 ```
 ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/7f6061b5-251a-4c5d-bd4f-290c28fc2f5a)
 - flag is  wctf{f34R_0f_m1ss1ng_0ut}
+## limited 2
+- question
+```
+import time
+import random
+import sys
+
+if __name__ == '__main__':
+    flag = input("Flag? > ").encode('utf-8')
+    correct = [192, 123, 40, 205, 152, 229, 188, 64, 42, 166, 126, 125, 13, 187, 91]
+    if len(flag) != len(correct):
+        print('Nope :(')
+        sys.exit(1)
+    if time.gmtime().tm_year >= 2024 or time.gmtime().tm_year < 2023:
+        print('Nope :(')
+        sys.exit(1)
+    if time.gmtime().tm_yday != 365 and time.gmtime().tm_yday != 366:
+        print('Nope :(')
+        sys.exit(1)    
+    for i in range(len(flag)):
+        # Totally not right now
+        time_current = int(time.time())
+        random.seed(i+time_current)
+        if correct[i] != flag[i] ^ random.getrandbits(8):
+            print('Nope :(')
+            sys.exit(1)
+        time.sleep(random.randint(1, 60))
+    print(flag)
+
+``` 
+### sovle not working
+```
+import time
+import random ##not workign
+import sys
+correct = [192, 123, 40, 205, 152, 229, 188, 64, 42, 166, 126, 125, 13, 187, 91]
+start=1703847081
+end  =1704149481
+for k in range(start,end):
+    sleep_time=0
+    y=''
+    for i in range(15):
+        # Totally not right now
+        time_current = k+sleep_time
+        random.seed(i+time_current)
+        x=chr(correct[i]^random.getrandbits(8))
+        sleep_time=sleep_time+(random.randint(1, 60))
+        y=y+x
+    # print("y is ",y)
+    if("wctf" in y):
+        print("flag is ",y)
+print("done")
+
+``
