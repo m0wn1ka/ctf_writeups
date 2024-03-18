@@ -74,6 +74,8 @@ else:
 ## bean cafe/web
 - question is
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/6e017a1c-ae64-4d80-8843-8584b70fafdb)
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/e0c8b21e-9caa-406a-a2ab-c4c78826faea)
+
 - we follo w this https://www.reddit.com/r/DataHoarder/comments/gokrmx/these_different_2_images_has_the_same_md5_hash/
 - https://drive.google.com/drive/folders/1eCcMtQkHTreAJT6JmwxG10x1HbT6prY0
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/e1d1c44f-2a40-4d85-881f-4909a155f4c3)
