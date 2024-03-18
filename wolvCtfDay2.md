@@ -115,4 +115,8 @@ for k in range(start,end):
         print("flag is ",y)
 print("done")
 
-``
+```
+## solves
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/c895409f-fc18-4c45-903c-8ea23bcd0d98)
+## scoreboard
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/b75dbc89-5d49-4c58-ab8e-52c33133ddad)
