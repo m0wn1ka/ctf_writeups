@@ -120,3 +120,5 @@ print("done")
 ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/c895409f-fc18-4c45-903c-8ea23bcd0d98)
 ## scoreboard
 ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/b75dbc89-5d49-4c58-ab8e-52c33133ddad)
+## profile
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/9149a902-1b48-454b-8d16-bfd4029e1a56)
