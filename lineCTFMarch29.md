@@ -1,4 +1,4 @@
-## jail boy /web
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/8ffdc9c7-1d65-492b-b9ea-92f53f9a07ae)## jail boy /web
 - problem
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/54bdb294-23cb-4028-ac66-7de8bd490d23)
 - the endpoint
@@ -33,4 +33,38 @@
 - here we see the parsing of jwt token in line 29 which is the insecure line
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/fa0463b9-4ba6-4565-89f5-0e2c25dc9f23)
 
-  
+
+## jalyboy-jalygirl/web
+- pretty much the same as before
+- but from code review here it looks like it uses asymmetric keys
+- but there does not apper a alogrithm imposition during verfication
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/31f976d8-0dfb-460a-bb2d-3e73bfe3cdaf)
+
+- so may be we can use the public key and sign ourselves as admin with it and say the algorihm uses hs256 (place alg:hs256)
+- decoding the token we see it uses es256
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/99d9cddd-fc06-4893-b9db-cbe60337a1db)
+- to understand edcsa https://www.youtube.com/watch?v=0NGPhAPKYv4
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/3bbe8d7c-3b2b-4c44-bc77-15f65797d239)
+- from this https://www.cryptomathic.com/news-events/blog/explaining-the-java-ecdsa-critical-vulnerability
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/fc974da3-b9bf-4413-a35b-c6ac683ed66c)
+- and we see it is java 17
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/c1f69fa6-7187-4516-8a66-2c9494a76eea)
+- so the main check that r,s being zero condition is not checked in this implementation
+- so now we need to bypass the signature
+- https://www.linkedin.com/pulse/exploitation-psychic-signatures-cve-2022-21449-zakhar-fedotkin/
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/bd4ba188-dd89-4f1a-bfc9-f7b48b4ec81b)
+- first sent this request
+```
+GET /?j=eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiJndWVzdCJ9._____wAAAAD__________7zm-q2nF56E87nKwvxjJVH_____AAAAAP__________vOb6racXnoTzucrC_GMlUQ HTTP/1.1
+```
+- same sub as guest but signature is with 0,0
+- we are still guest only with this request
+- now change the sub to admin
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/e9e7dfca-fe43-452c-b1cd-9c23504b3c3e)
+- now with this request we get the flag and login as admin
+- ![Uploading image.png…]()
+
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/5924424c-c5ca-4edf-bb93-2c655d0dd88e)
+```
+           <p>flag is <code>LINECTF{abaa4d1cb9870fd25776a81bbd278932}</code> &#x1f389;</p>
+```
