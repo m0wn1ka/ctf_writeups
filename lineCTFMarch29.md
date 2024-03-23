@@ -25,5 +25,12 @@
 ```
         <p>flag is <code>LINECTF{337e737f9f2594a02c5c752373212ef7} &#x1f389;</code></p>
 ```
+### white box approach
+- we are given the source code
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/fc5daa89-cbec-45e2-aa25-1ec7f215a8df)
+- from docker file we see it uses java
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/3247fb2d-a1cb-4df3-96a0-8832f8d8167d)
+- here we see the parsing of jwt token in line 29 which is the insecure line
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/fa0463b9-4ba6-4565-89f5-0e2c25dc9f23)
 
   
