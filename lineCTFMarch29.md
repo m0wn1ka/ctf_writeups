@@ -68,7 +68,7 @@ GET /?j=eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiJndWVzdCJ9._____wAAAAD__________7zm-q2nF5
 ```
            <p>flag is <code>LINECTF{abaa4d1cb9870fd25776a81bbd278932}</code> &#x1f389;</p>
 ```
-## zipviewer-version-citizen/web
+## zipviewer-version-citizen/web --not completed
 - descritpion of challenge
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/44ba8465-49f4-4d3f-9e4e-b243be908662)
 - the source code
@@ -79,6 +79,6 @@ GET /?j=eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiJndWVzdCJ9._____wAAAAD__________7zm-q2nF5
 - so req to / will go to http://webapp;
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/3431498f-56d9-48ea-89a2-eaaf613587c7)
 - same site =lax cors cofig
-- when giving username  req goes to /enter/user_input
+- when giving username  req goes to /enter/user_input and redirct to /viewer
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/332b594c-3191-445d-835c-cde8ec35d932)
 - 
