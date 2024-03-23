@@ -62,9 +62,23 @@ GET /?j=eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiJndWVzdCJ9._____wAAAAD__________7zm-q2nF5
 - now change the sub to admin
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/e9e7dfca-fe43-452c-b1cd-9c23504b3c3e)
 - now with this request we get the flag and login as admin
-- ![Uploading image.png…]()
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/91fe33ce-4c53-4b24-8960-2b80c498a30f)
 
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/5924424c-c5ca-4edf-bb93-2c655d0dd88e)
 ```
            <p>flag is <code>LINECTF{abaa4d1cb9870fd25776a81bbd278932}</code> &#x1f389;</p>
 ```
+## zipviewer-version-citizen/web
+- descritpion of challenge
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/44ba8465-49f4-4d3f-9e4e-b243be908662)
+- the source code
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/eb5a31ea-26c0-4f07-85fc-ccc942c54e19)
+- we see it uses vapour framework which is written in swift and made my apple inc
+- a little bit of proxy pass
+- https://dev.to/danielkun/nginx-everything-about-proxypass-2ona
+- so req to / will go to http://webapp;
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/3431498f-56d9-48ea-89a2-eaaf613587c7)
+- same site =lax cors cofig
+- when giving username  req goes to /enter/user_input
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/332b594c-3191-445d-835c-cde8ec35d932)
+- 
