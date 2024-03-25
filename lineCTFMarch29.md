@@ -5,7 +5,7 @@
 
 
 
-## jail boy /web
+# jail boy /web
 - problem
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/54bdb294-23cb-4028-ac66-7de8bd490d23)
 - the endpoint
@@ -41,7 +41,7 @@
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/fa0463b9-4ba6-4565-89f5-0e2c25dc9f23)
 
 
-## jalyboy-jalygirl/web
+# jalyboy-jalygirl/web
 - pretty much the same as before
 - but from code review here it looks like it uses asymmetric keys
 - but there does not apper a alogrithm imposition during verfication
