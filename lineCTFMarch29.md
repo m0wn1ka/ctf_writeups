@@ -1,4 +1,11 @@
-![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/8ffdc9c7-1d65-492b-b9ea-92f53f9a07ae)## jail boy /web
+## solved challenges
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/19a3b566-1ce2-4a7a-aed1-de058942d86a)
+## score board
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/02832408-92c7-4ef8-abe2-974e1c913be4)
+
+
+
+## jail boy /web
 - problem
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/54bdb294-23cb-4028-ac66-7de8bd490d23)
 - the endpoint
@@ -68,6 +75,7 @@ GET /?j=eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiJndWVzdCJ9._____wAAAAD__________7zm-q2nF5
 ```
            <p>flag is <code>LINECTF{abaa4d1cb9870fd25776a81bbd278932}</code> &#x1f389;</p>
 ```
+![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/8ffdc9c7-1d65-492b-b9ea-92f53f9a07ae)
 ## zipviewer-version-citizen/web --not completed
 - descritpion of challenge
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/44ba8465-49f4-4d3f-9e4e-b243be908662)
