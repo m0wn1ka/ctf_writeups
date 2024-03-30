@@ -65,3 +65,9 @@ app.use(express.urlencoded({ extended: true }));
 ```
 - res.send but not return res.send
 - time based attacks like it did not use andy standard way of comparison of password checking
+### express.urlencoded({exteded:true})
+https://www.reddit.com/r/expressjs/comments/up0qe1/why_would_i_use_expressurlencodedextended_false/
+- may be it will not work
+- as the lenght of username is limited
+- https://www.npmjs.com/package/qs#readme
+- and we access the object based on username
