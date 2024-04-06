@@ -68,4 +68,36 @@ uint32	sfntVersion	0x00010000 or 0x4F54544F (‘OTTO’)
 ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/3504a4c4-81b4-4a62-b96c-c056218cced4)
 - sqlite3 https://www.digitalocean.com/community/tutorials/how-to-use-the-sqlite3-module-in-python-3
 - in memory sqlite3 https://www.sqlite.org/inmemorydb.html
-- 
+- support for concurrency https://stackoverflow.com/questions/393554/python-sqlite3-and-concurrency
+- https://www.geeksforgeeks.org/python-re-search-vs-re-match/
+```
+import re
+a=input("give id")
+while(a!=0):
+    if not re.match("[1234567890abcdef]{3}", a):
+        print("invalid id")
+    else:
+        print("valid")
+    a=input("give id")
+```
+- there is a issue with regular expression it is re.match
+- so if we give exaclty 16 valid chars followed by anything it just accepts
+```
+@app.route("/search", methods=["POST"])
+def search():
+    id = request.form["id"]
+    if not re.match("[1234567890abcdef]{16}", id):
+        return "invalid id"
+    searched = db.execute(f"SELECT searched FROM table_{id}").fetchone()[0]
+    if searched:
+        return "you've used your shot."
+
+```
+- so here id is user contolled
+- i dont see any default tables with table_* in sqlite3
+- we need to see what happens` searched = db.execute(f"SELECT searched FROM table_{id}").fetchone()[0]` when table does not exist
+- `a%'union select 1/*` in /search gives internal servre err
+- `a%'union select "1"/*`
+- this does give output so there is sql injection
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/df4d2a1e-53de-4f99-b249-9683cca1866e)
+
