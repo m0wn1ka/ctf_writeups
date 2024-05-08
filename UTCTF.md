@@ -13,4 +13,5 @@
 ### random tries
 - command execution/injection(in normal attributes,in session)
 - session manipulation to get session of user1
-- look into the packagae.json and find old versions
+- loOok into the packagae.json and find old versions
+- NEW LOIN
